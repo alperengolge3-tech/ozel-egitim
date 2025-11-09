@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özel Eğitim Vize Notları</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Aktif sekme için basit bir stil */
+        .nav-link.active {
+            font-weight: 700;
+            color: #4f46e5; /* indigo-600 */
+        }
+        /* İçerik bölümlerine daha iyi görünürlük için */
+        section {
+            scroll-margin-top: 80px; /* Sabit header yüksekliği kadar */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-indigo-600">Özel Eğitim Notları</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#temel-kavramlar" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Temel Kavramlar</a>
+                        <a href="#ustun-yetenekliler" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Üstün Yetenekliler</a>
+                        <a href="#zihin-yetersizligi" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Zihin Yetersizliği</a>
+                        <a href="#otizm" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Otizm (OSB)</a>
+                        <a href="#ogrenme-guclugu" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Öğrenme Güçlüğü</a>
+                        <a href="#ek-bilgiler" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-white bg-yellow-500 hover:bg-yellow-600">Sınav Notları ve Ek Bilgiler</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <span class="sr-only">Menüyü aç</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#temel-kavramlar" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Temel Kavramlar</a>
+                <a href="#ustun-yetenekliler" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Üstün Yetenekliler</a>
+                <a href="#zihin-yetersizligi" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Zihin Yetersizliği</a>
+                <a href="#otizm" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Otizm (OSB)</a>
+                <a href="#ogrenme-guclugu" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Öğrenme Güçlüğü</a>
+                <a href="#ek-bilgiler" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white bg-yellow-500 hover:bg-yellow-600">Sınav Notları ve Ek Bilgiler</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Özel Eğitim Vize Sınavı Notları</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Bu sayfa, "Özel Eğitim" dersi vize sınavı için PDF ve DOCX notlarınızdan derlenen ana konuları içermektedir.</p>
+        </section>
+
+        <!-- Bölüm: Temel Kavramlar -->
+        <section id="temel-kavramlar" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-indigo-500">1. Özel Eğitimde Temel Kavramlar</h2>
+            <div class="space-y-6">
+                <!-- Kart: Zedelenme, Yetersizlik, Engel -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Zedelenme, Yetersizlik ve Engel</h3>
+                    <ul class="list-disc list-inside space-y-3">
+                        <li><strong>Zedelenme:</strong> Tıbbi tanım olarak fiziksel bir hasar veya herhangi bir nedenden dolayı doku ve organlarda oluşan işlev bozukluğudur. Bu işlev bozukluğu <strong>geçici</strong> ya da <strong>kalıcı</strong> olabilir. (Örn: Trafik kazası sonrası kolda sinir zedelenmesi).</li>
+                        <li><strong>Yetersizlik:</strong> Zedelenmenin kalıcı olması sonucu bir konuda yetersiz olma durumu, bir organın işlevini yeteri kadar yerine getirememesi. (Örn: Kalıcı sinir hasarı sonucu kolu kullanamama, his kaybı).</li>
+                        <li><strong>Engel/Özür:</strong> Yetersizlik nedeniyle toplumun beklentilerini yerine getirememe durumu. (Örn: Kolunu kullanamadığı için toplum standardı olan kapı kolunu tutup açamama). Özel eğitimde "engel" veya "özür" yerine <strong>"yetersizlik"</strong> terimi tercih edilir.</li>
+                    </ul>
+                </div>
+                 <!-- Kart: Özel Eğitimin Amacı -->
+                 <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Özel Eğitimin Amacı</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Bireylere akademik beceriler kazandırmak.</li>
+                        <li>Sosyal becerilerini geliştirmek.</li>
+                        <li>Toplumun beklentilerini (temel düzeyde) karşılayabilmelerini ve temel ihtiyaçlarını giderebilmelerini sağlamak.</li>
+                    </ul>
+                </div>
+                <!-- Kart: Diğer Önemli Kavramlar -->
+                 <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Diğer Önemli Kavramlar</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Çoklu Yetersizlik:</strong> Bireyde iki veya daha fazla yetersizliğin bir arada bulunması durumu.</li>
+                        <li><strong>İki Kere Farklı Birey:</strong> Bireyde hem özel yetenek (üstün zeka) hem de bir yetersizlik (örn: OSB, ÖÖG) bulunması durumu. (Not: Özel yetenek + Zihin yetersizliği aynı anda olamaz).</li>
+                        <li><strong>Süreğen Hastalıklar:</strong> Kanser gibi uzun süreli tedavi ve destek gerektiren hastalıklar da özel eğitim kapsamına girebilir.</li>
+                    </ul>
+                </div>
+                <!-- Kart: Gelişim Farklılığının Nedenleri -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Gelişim Farklılığının Nedenleri</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Doğum Öncesi -->
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-red-600">Doğum Öncesi Nedenler</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Anne yaşı</li>
+                                <li>Annenin beslenmesi</li>
+                                <li>Kullanılan ilaçlar, alkol, sigara</li>
+                                <li>Radyasyon, travmalar</li>
+                                <li>Geçirilen hastalıklar</li>
+                                <li>Akraba evlilikleri, kan uyuşmazlığı</li>
+                                <li>Genetik / Metabolik hastalıklar</li>
+                            </ul>
+                        </div>
+                        <!-- Doğum Sırası -->
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-blue-600">Doğum Sırasındaki Nedenler</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Erken ya da geç doğum</li>
+                                <li>Riskli ve zor doğum</li>
+                                <li>Uzman hataları</li>
+                                <li>Hijyenik olmayan ortam</li>
+                            </ul>
+                        </div>
+                        <!-- Doğum Sonrası -->
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-green-600">Doğum Sonrası Nedenler</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Enfeksiyonlar, hastalıklar</li>
+                                <li>Beslenme bozuklukları</li>
+                                <li>Kazalar, travmalar, zehirlenmeler</li>
+                                <li>Çocuk istismarı</li>
+                                <li>Yetersiz çevre koşulları</li>
+                                <li>Savaşlar, doğal afetler</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kart: Özel Eğitim İlkeleri -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Özel Eğitim İlkeleri</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Disiplinler arası yaklaşımla çalışılır.</li>
+                        <li>Hizmetlere mümkün olduğu kadar erken başlanır.</li>
+                        <li>Bireysel farklılıklar, ilgi, ihtiyaç ve yetersizliğe göre BEP hazırlanır.</li>
+                        <li>Hizmetler bireyi sosyal ve fiziksel çevreden ayırmadan planlanır.</li>
+                        <li>Diğer bireylerle birlikte eğitime (kaynaştırma) öncelik verilir.</li>
+                        <li>Kurumlar arası (farklı kurumlarla) iş birliği yapılır.</li>
+                        <li>Bireyselleştirilmiş Eğitim Programı (BEP) geliştirilir ve uygulanır.</li>
+                        <li>Ailelerin sürece aktif katılımı sağlanır.</li>
+                        <li>STK'lar ve üniversiteler ile iş birliği yapılır.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bölüm: Üstün Yetenekliler -->
+        <section id="ustun-yetenekliler" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-indigo-500">2. Üstün Yetenekliler (Özel Yetenekliler)</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Tanımlar ve Yetenek Alanları</h3>
+                    <ul class="list-disc list-inside space-y-3">
+                        <li><strong>Kullanılan Terimler:</strong> Dahi (Genious) -> Üstün Zekalı -> Üstün Zekalı ve Yetenekli -> Üstün Yetenekli -> <strong>Özel Yetenekli</strong> (Güncel tercih).</li>
+                        <li><strong>Zeka:</strong> Öğrenme, anlama, muhakeme etme, değerlendirme, akıl yürütme gibi zihinsel işlevleri kullanarak yeni durumlara adapte olma becerisi.</li>
+                        <li><strong>Üstün/Özel Zeka:</strong> Herhangi bir alan ya da birkaç alanda normal gelişim gösteren akranlarına göre bir potansiyele sahip ya da yüksek performansa sahip bireylerdir.</li>
+                    </ul>
+                     <h4 class="text-xl font-semibold mt-4 mb-2">Yetenek Alanları:</h4>
+                    <ul class="list-disc list-inside">
+                        <li>Genel zihin yeteneği</li>
+                        <li>Özel akademik yetenek</li>
+                        <li>Yaratıcı veya üretken düşünme yeteneği</li>
+                        <li>Liderlik yeteneği</li>
+                        <li>Görsel ve sanat yeteneği</li>
+                        <li>Motor yetenek</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Özel Yetenekli Bireylerin Özellikleri</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Genel ve Erken Gelişim</h4>
+                            <ul class="list-disc list-inside text-sm space-y-1">
+                                <li>Liderlik vasıfları yüksektir.</li>
+                                <li>Mükemmeliyetçidirler.</li>
+                                <li>Hafızaları güçlüdür, daha çok ve çabuk öğrenirler.</li>
+                                <li>Meraklıdırlar ve çok soru sorarlar.</li>
+                                <li>Haksızlığa toleransları azdır.</li>
+                                <li>Yaratıcıdırlar ve iyi espri yaparlar.</li>
+                                <li>Erken yürür ve erken konuşurlar.</li>
+                                <li>Yüksek enerji düzeyine sahiptirler.</li>
+                                <li>Okumaya erken yaşta ilgi duyarlar.</li>
+                                <li>Özerktirler (bağımsız) ve duyarlıdırlar.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Zihinsel ve Kişilik</h4>
+                             <ul class="list-disc list-inside text-sm space-y-1">
+                                <li>Zihinleri devamlı faaldir, öğrenmeye açıktırlar.</li>
+                                <li>Dili etkili kullanırlar, kelime hazineleri zengindir.</li>
+                                <li>Güçlü bellekleri ve konsantrasyonları vardır.</li>
+                                <li>Genelleme yapabilir, bilgiyi transfer edebilirler.</li>
+                                <li>Eleştirel ve muhakeme yetenekleri gelişmiştir.</li>
+                                <li>Bağımsız olma eğilimindedirler.</li>
+                                <li>İçten denetimlidirler (motivasyon içseldir).</li>
+                                <li>Çalışkan, azimli ve sorumluluk sahibidirler.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Tanılama Süreci ve BİLSEM</h3>
+                    <p class="mb-3">Tanılama, eğitime başlangıç aşamasında yapılır ve MEB tarafından kurulan <strong>Bilim ve Sanat Merkezleri (BİLSEM)</strong> aracılığıyla yürütülür.</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Aday Gösterme:</strong> Sınıf öğretmenleri gözlem formlarını doldurarak 3 alanda (Genel Zihinsel, Görsel Sanatlar, Müzik) öğrenciyi aday gösterir.</li>
+                        <li><strong>Grup Tarama:</strong> Aday gösterilen tüm öğrenciler tablet/bilgisayar ile grup tarama uygulamasına katılır. Başarılı olanlar bireysel değerlendirmeye geçer.</li>
+                        <li><strong>Bireysel Değerlendirme:</strong>
+                            <ul class="list-disc list-inside ml-4">
+                                <li><strong>Genel Zihinsel Yetenek:</strong> Zeka testleri uygulanır (örn: WNV, KBIT-2, ASİS).</li>
+                                <li><strong>Görsel Sanatlar / Müzik:</strong> Zeka testi uygulanmaz; özgün çalışmalar veya müziksel işitme/bellek/farkındalık değerlendirmeleri yapılır.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">BİLSEM Eğitim Programları</h3>
+                     <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Uyum Programı:</strong> Kurumu, programları ve kişileri tanıma.</li>
+                        <li><strong>Destek Eğitimi Programı:</strong> Temel becerilerin tüm disiplinlerle ilişkilendirilmesi.</li>
+                        <li><strong>Bireysel Yetenekleri Fark Ettirme Programı:</strong> Öğrencinin bireysel yeteneklerini fark etmesi.</li>
+                        <li><strong>Özel Yetenekleri Geliştirme Programı:</strong> Fark edilen özel yeteneklerin geliştirilmesi.</li>
+                        <li><strong>Proje Üretimi ve Yönetimi Programı:</strong> Öğrencinin bireysel veya grup olarak proje yürütmesi.</li>
+                    </ol>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Eğitim Stratejileri</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Gruplama</h4>
+                            <p>Öğrencinin yetenek düzeylerine göre farklı okullarda, sınıflarda veya sınıf içinde farklı biçimlerde eğitim alması.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Hızlandırma</h4>
+                            <p>Bir programın normal sürecinden daha önce tamamlanması. Sınıfta sıkılmayı engeller.</p>
+                            <ul class="list-disc list-inside mt-2 text-sm">
+                                <li>Okula Erken Başlama</li>
+                                <li>Sınıf Yükseltme (Sınıf Atlama)</li>
+                                <li>Konu Atlama</li>
+                                <li>Üniversiteye Erken Başlama</li>
+                                <li>Uluslararası Bakalorya (IB) Programı</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Zenginleştirme</h4>
+                            <p>(Notlarda detaylı bilgi yok, başlık olarak mevcut.)</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Mentörlük</h4>
+                            <p>Öğrencilere uzmanlarla çalışma olanağı sağlama, özel yeteneklerini destekleme, mesleki ilgilerini keşfettirme.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Farklılaştırma</h3>
+                    <p class="mb-3">Öğrencilerin kişisel sınırlarının ve poteniyellerinin farklılığını kabul ederek, farklı ihtiyaçlarına cevap verecek şekilde öğretimin düzenlenmesi.</p>
+                    <ul class="list-disc list-inside">
+                        <li><strong>İçerik Farklılaştırma (Ne Öğretilecek?):</strong> Hızlandırma, yoğunlaştırma, çeşitlilik, yeniden düzenleme.</li>
+                        <li><strong>Süreç Farklılaştırma (Nasıl Öğretilecek?):</strong> Açık uçlu sorular, üst düzey düşünme, grup etkileşimi, esnek zamanlama.</li>
+                        <li><strong>Ürün Farklılaştırma (Ne Öğrendiğini Gösterme):</strong> Yaratıcılığı destekleyen, gerçek problemler içeren, sentez ve öz değerlendirme içeren ürünler (Örn: Rapor yerine oyun tasarlama).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bölüm: Zihin Yetersizliği -->
+        <section id="zihin-yetersizligi" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-indigo-500">3. Zihin Yetersizliği</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Tanım Kriterleri (DSM-V ve AAIDD)</h3>
+                    <p class="mb-3">AAIDD 2010 Tanımı: Zihin yetersizliği, zihinsel işlevde bulunma ve kavramsal, sosyal ve pratik uyumsal becerilerde kendini gösteren uyumsal davranışların her ikisinde de anlamlı sınırlılıklar olarak karakterize edilen <strong>nörogelişimsel bir bozukluktur</strong>. Bu yetersizlik 18 yaşından önce (gelişimsel dönemde) başlar.</p>
+                    <p class="font-semibold">DSM-V'e göre 3 kriter:</p>
+                    <ol class="list-decimal list-inside ml-4">
+                        <li>Klinik değerlendirme ve zeka testi ile onaylanan zihinsel işlevsellikte eksiklikler.</li>
+                        <li>Bağımsızlık ve sosyal sorumluluğu engelleyen uyarlanabilir işlevsellikte eksiklikler.</li>
+                        <li>Bu eksikliklerin çocukluk döneminde ortaya çıkması.</li>
+                    </ol>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Zihin Yetersizliği Olan Bireylerin Özellikleri (Genel)</h3>
+                    <ul class="list-disc list-inside space-y-3 columns-1 md:columns-2">
+                        <li>Dil ve iletişim sınırlılıkları.</li>
+                        <li>Öğrenmede sınırlılık.</li>
+                        <li>Kompleks cümle kuramaz/anlayamazlar.</li>
+                        <li>Soyut kavramları (deyim, atasözü) öğrenmede güçlük çekerler.</li>
+                        <li>Öğrenilmiş çaresizlik yaşarlar.</li>
+                        <li>Depresyona meyillidirler.</li>
+                        <li><strong>Yıkıcı davranışlar ve öfke nöbetleri</strong> gösterebilirler.</li>
+                        <li>Öz düzenleme ve öz bakım becerilerinde sınırlılık.</li>
+                        <li>Denge problemleri ve motor gecikmeler.</li>
+                        <li>Duygu durum bozukluğu ve kaygı bozuklukları (Anksiyete, OKB).</li>
+                        <li>Dürtü kontrol bozukluğu (bazılarında vurma vb.).</li>
+                        <li>Temasa aşırı duyarlı veya duyarsız olabilirler.</li>
+                        <li>Jest ve mimikleri zor anlayabilirler.</li>
+                        <li>Ekolali (OSB'ye göre daha az).</li>
+                        <li>Güdüsel özellikler: Dış denetim odağı, başarısızlık beklentisi.</li>
+                        <li>Fiziksel özellikler: Görme/işitme problemleri yaygındır.</li>
+                        <li>İlişkili durumlar: <strong>Down Sendromu (Trizomi 21)</strong> zihin yetersizliği yapan genetik bir hastalıktır. Serebral Palsi (SP) de eşlik edebilir.</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Sınıflandırma (DSM-IV Zeka Bölümü)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Zeka Bölümü Puan Aralığı</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Yetersizlik Düzeyi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">70 - 55/50</td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium text-green-600">Hafif düzeyde zihin yetersizliği</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">35 - 50/55</td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium text-yellow-600">Orta düzeyde zihin yetersizliği</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">25 - 35/40</td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium text-orange-600">Ağır düzeyde zihin yetersizliği</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">20/25'ten daha altı</td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium text-red-600">Çok ağır düzeyde zihin yetersizliği</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bölüm: Otizm Spektrum Bozukluğu (OSB) -->
+        <section id="otizm" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-indigo-500">4. Otizm Spektrum Bozukluğu (OSB)</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Tanım ve DSM-5 Değişiklikleri</h3>
+                    <p class="mb-3"><strong>APA Tanımı:</strong> Sosyal etkileşim ve sosyal iletişimde kalıcı bozukluklar ve sınırlı tekrarlayıcı davranışlarla karakterize olan ve gelişimin erken dönemlerinde ortaya çıkan <strong>nörolojik gelişimsel</strong> bir bozukluktur.</p>
+                    <ul class="list-disc list-inside">
+                        <li>DSM-4'teki "Yaygın Gelişimsel Bozukluk (YGB)" tanımı yerine DSM-5'te <strong>"Otizm Spektrum Bozukluğu (OSB)"</strong> terimi gelmiştir.</li>
+                        <li>OSB, bir <strong>şemsiye terim</strong> olarak Asperger, Çocukluk Dezintegratif Bozukluğu gibi alt grupları tek çatıda birleştirmiştir. (Rett Sendromu çıkarıldı).</li>
+                        <li>Belirti alanları 3'ten 2'ye indirildi:
+                            <ol class="list-alpha-lower list-inside ml-4">
+                                <li>Sosyal Etkileşim ve İletişim (Birleştirildi)</li>
+                                <li>Sınırlı ve Yineleyici Davranışlar (Korundu)</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">DSM-5 Tanı Kriterleri ve Koşulu</h3>
+                     <p class="mb-3 font-semibold text-red-600">Tanı Koşulu: Bireyin A grubundaki 3 kriterin tamamını VE B grubundaki 4 kriterden en az 2'sini karşılaması gerekir.</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">A. Sosyal İletişim ve Etkileşimde Kısıtlılık (3/3)</h4>
+                            <ul class="list-disc list-inside ml-4 mt-2 space-y-2">
+                                <li><strong>A1. Sosyal-duygusal kısıtlılık:</strong> Olağandışı toplumsal yaklaşım, karşılıklı konuşamama, ilgi veya duygu paylaşamama, toplumsal etkileşimi başlatamama.</li>
+                                <li><strong>A2. Sözel olmayan iletişimde kısıtlılık:</strong> Göz teması ve beden dilinde olağandışılıklar, jest-mimikleri anlama ve kullanma eksiklikleri, yüz ifadesinin hiç olmaması.</li>
+                                <li><strong>A3. Akran ilişkilerinde zorluklar:</strong> İlişki kurma ve sürdürmede zorluk, imgesel (sembolik) oyunu paylaşamama, yaşıtlarına ilgisizlik.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">B. Sınırlı, Tekrarlayıcı İlgi ve Aktiviteler (En az 2/4)</h4>
+                            <ul class="list-disc list-inside ml-4 mt-2 space-y-2">
+                                <li><strong>B1. Tekrarlayıcı motor hareketler:</strong> Basmakalıp davranışlar (el çırpma), oyuncakları sıraya dizme, <strong>Ekolali</strong> (yankılama), kendine özgü deyişler.</li>
+                                <li><strong>B2. Aynılıkta ısrar, rutinler:</strong> Küçük değişikliklere aşırı sıkıntı duyma, geçişlerde zorluk, katı düşünce örüntüleri, törensel davranışlar (hep aynı yoldan gitme, aynı yemeği yeme).</li>
+                                <li><strong>B3. Kısıtlı ilgi alanları:</strong> Yoğunluğu ve odağı olağandışı olan saplantılı ilgiler (örn: alışılmadık nesnelere aşırı bağlanma).</li>
+                                <li><strong>B4. Duyusal ilgi/tepkiler:</strong> Duyusal girdilere (ağrı, ısı, ses, doku) aşırı ya da düşük tepki gösterme (örn: acı eşiğinin yüksek olması, sesten aşırı korkma, nesneleri aşırı koklama, ışıklardan büyülenme).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">OSB Olan Bireylerin Özellikleri (Detaylı)</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Sağlık:</strong> Sık hastalanırlar; kan dolaşımı, sindirim (diyet gerekebilir) ve metabolik sorunlar yaşayabilirler.</li>
+                        <li><strong>Psikoloji:</strong> Travma/depresyona meyillidirler (dışlanma nedeniyle). %40-70 arası ek psikiyatrik sorun görülebilir. Öğrenilmiş çaresizlik yaşarlar.</li>
+                        <li><strong>Sosyal Etkileşim:</strong> Göz kontağı kuramaz/sürdüremezler. Başkalarının duygularını/düşüncelerini anlamada (Zihin Kuramı) yetersizlik. Akranlarıyla etkileşimsizlik, yalnızlığı yeğleme.</li>
+                        <li><strong>Dil ve İletişim:</strong> %50'sinde ifade edici dilde problem vardır. Ekolali (tekrarlama) sıktır. Zamirleri karıştırma (özellikle "ben" kullanımı). Mecazi dili, deyim ve atasözlerini gerçek anlamıyla anlarlar. Ses tınısı, vurgusu, hızı anormal olabilir (çok yüksek/alçak ses).</li>
+                        <li><strong>Davranışsal:</strong> Dönen şeylere aşırı ilgi, parmak ucunda yürüme. <strong>Sembolik oyun becerileri sınırlıdır</strong> (örn: tabağı direksiyon yapamama). Yönergelere uymama, öfke nöbetleri, kendine veya başkasına zarar verme (vurma, ısırma, kafa atma).</li>
+                        <li><strong>Diğer Özellikler:</strong> Uyku sorunları (%50'den fazla). Yeme sorunları (katı yiyecek reddi, aşırı seçicilik, yenilemez maddeleri yeme - Pika). Uygunsuz cinsel davranışlar (uygunsuz dokunma, mastürbasyon). Acı eşikleri yüksek olabilir.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bölüm: Özel Öğrenme Güçlüğü (ÖÖG) -->
+        <section id="ogrenme-guclugu" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-indigo-500">5. Özel Öğrenme Güçlüğü (ÖÖG)</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Tanım ve Kriterler</h3>
+                    <p class="mb-3">Okuma, okuduğunu anlama, yazma, yazım kuralları, matematiksel işlemler ve sembolleri anlayıp kullanmada yaşanan sınırlılıklara rağmen bireyin <strong>normal veya normalin üzerinde zekaya sahip</strong> olmasıdır. ÖÖG bir çatı terimdir.</p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>Belirtilerin tespiti için <strong>en az 6 ay</strong> sürmesi gerekir.</li>
+                        <li>Müdahaleye rağmen akademik beceriler yaş ortalamasının çok altındadır.</li>
+                        <li>Güçlükler okul yıllarında başlar.</li>
+                        <li>Bu durum zihinsel yetersizlik, görme/işitme bozukluğu vb. ile açıklanamaz.</li>
+                        <li>ÖÖG tıbbi bir tanıdır (Çocuk Psikiyatrisi), eğitsel tanılama RAM tarafından yapılır.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">ÖÖG Türleri</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-red-600">Disleksi (Okuma Bozukluğu)</h4>
+                            <p>Akıcı ve doğru okumada zorluk. Harfleri ve sesleri öğrenememe, sözlü/yazılı dili organize edememe.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-blue-600">Disgrafi (Yazılı Anlatım Bozukluğu)</h4>
+                            <p>Yazma yeteneğinde gecikme veya kayıp. Motor sorunlar (yanlış kalem tutma) veya dilsel sorunlar görülebilir. Yazı bozuk, düzensizdir.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-green-600">Diskalkuli (Aritmetik Bozukluk)</h4>
+                            <p>Sayısal ilişkileri kavrama, hesaplama, sayısal sembolleri tanıma ve kullanmada zorluk. Çarpım tablosunu öğrenememe.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">ÖÖG Özellikleri (Okul Dönemi)</h3>
+                    <ul class="list-disc list-inside space-y-2 columns-1 md:columns-2">
+                        <li>Okumayı geç ve zor öğrenme.</li>
+                        <li>Yavaş ve hatalı okuma.</li>
+                        <li>Okurken harf karıştırma (<strong>d-b, p-b</strong>).</li>
+                        <li>Harf sırasını karıştırma (kız -> zık, ızk).</li>
+                        <li>Benzer kelimeleri karıştırma (dağ-bağ, şal-sal, incir-zincir).</li>
+                        <li>Ayna görüntüsü yazma (ters yazma).</li>
+                        <li>Hece atlama veya heceleri ters yazma.</li>
+                        <li>Yazı bozuklukları, sayfayı düzensiz kullanma.</li>
+                        <li>Matematikte güçlük, çarpım tablosunu öğrenememe.</li>
+                        <li>İmla ve noktalama hataları.</li>
+                        <li>Okuduğunu anlamada sorun yaşama.</li>
+                        <li>Yönergeleri takip etmekte zorluk.</li>
+                        <li>Yönleri (sağ-sol) karıştırma.</li>
+                        <li><strong>Zaman yönetiminde eksiklik</strong> (zamanı kavrama/kullanma).</li>
+                        <li><strong>Sakarlık (Motor Koordinasyon Bozukluğu)</strong>.</li>
+                        <li>Dikkat dağınıklığı ve erken unutma.</li>
+                        <li>Aşırı düzensizlik.</li>
+                        <li>Yazılı sınavlarda sözlüye göre daha düşük başarı.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bölüm: Ek Bilgiler -->
+        <section id="ek-bilgiler" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-yellow-500">6. Sınav Notları ve Ek Bilgiler</h2>
+            <div class="space-y-6">
+                <!-- Kart: Sınav İpuçları -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-yellow-500">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-700">Sınav İpuçları (Çıkacak / Çıkmayacak)</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-600 mb-2">Çıkması Muhtemel Konular</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Soruların %20'si anlatılanlardan gelecek.</li>
+                                <li><strong>Özel Eğitim Nedir?</strong> tanımının "Kime? Kim? Nerede? Nasıl?" soruları ekseninde sorulması.</li>
+                                <li>APA, DSM, AAIDD açılımları.</li>
+                                <li>AAIDD 2010 Zihin Yetersizliği tanımı.</li>
+                                <li>Özel Eğitimin kısa tarihi (İtard, Binet vb.).</li>
+                                <li>DSM-V nedir, ne işe yarar, kim günceller.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-red-600 mb-2">Çıkmayacak Konular</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Sınıflandırma yaklaşımları (Zihin Yet.)</li>
+                                <li>Yaygınlığı ve görülme sıklığı (Zihin Yet.)</li>
+                                <li>Sınıflandırma (Zihin Yet.) (Not: DSM-IV sınıflandırması notlarda mevcut, ancak bu ipucuna göre detaylı yaklaşımlar çıkmayabilir.)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kart: Kısaltmalar -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Önemli Kısaltmalar ve Kurumlar</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>APA (American Psychiatric Association):</strong> Amerikan Psikiyatri Derneği. DSM'yi güncelleyen kurumdur.</li>
+                        <li><strong>DSM (Diagnostic and Statistical Manual of Mental Disorders):</strong> Ruhsal Bozuklukların Tanısal ve İstatistiksel El Kitabı. Bipolar, OKB, Otizm, DEHB gibi tüm ruhsal ve mental bozuklukların tanı kriterlerini içerir.</li>
+                        <li><strong>AAIDD (American Association on Intellectual and Developmental Disabilities):</strong> Amerika Zihinsel ve Gelişimsel Yetersizlikler Birliği. (Seguin kurucusudur).</li>
+                        <li><strong>BEP (Bireyselleştirilmiş Eğitim Programı):</strong> Özel gereksinimli her birey için ayrı ayrı hazırlanan eğitim planı.</li>
+                        <li><strong>BİLSEM (Bilim ve Sanat Merkezleri):</strong> Özel yetenekli öğrencilere destek eğitimi veren MEB kurumları.</li>
+                    </ul>
+                </div>
+                <!-- Kart: Tarihçe -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Özel Eğitimin Kısa Tarihçesi</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Yunanlılar:</strong> Özel gereksinimli çocukları ölüme terk ettiler.</li>
+                        <li><strong>Mısırlılar:</strong> Tanrının armağanı olarak görüp iyileştirmek için dua ettiler.</li>
+                        <li><strong>Aristokratlar:</strong> Çocukları akıl hastanelerine gönderdiler.</li>
+                        <li><strong>Orta Çağ:</strong> Ayrıştırma uygulandı, "günahkâr" olarak görüldüler.</li>
+                        <li><strong>Osmanlı:</strong> Darüşşifalar açıldı, medrese eğitimi ve tıbbi eğitim yapıldı.</li>
+                        <li><strong>İtard:</strong> "Vahşi çocuk" (Victor) ile çalıştı.</li>
+                        <li><strong>Seguin:</strong> İtard'ın öğrencisi, AAIDD'nin kurucusu.</li>
+                        <li><strong>Montessori:</strong> Özel eğitim yöntemleri geliştirdi.</li>
+                        <li><strong>Binet:</strong> İlk zekâ testini geliştiren kişidir.</li>
+                    </ul>
+                </div>
+                 <!-- Kart: Diğer Kavramlar -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Diğer Önemli Kavramlar</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Buzdolabı Anne (Geçersiz Kavram):</strong> 1920-40'larda Leo Kanner tarafından ortaya atılan, otizmin nedenini ailenin (annenin) soğuk, katı ve ilgisiz davranışlarına bağlayan, günümüzde <strong>tamamen geçersiz</strong> olan bir iddia.</li>
+                        <li><strong>İfade Edici Dil:</strong> Duygu, düşünce ve fikirleri karşıya aktarma, konuşma becerisi.</li>
+                        <li><strong>Alıcı Dil:</strong> İfade edileni anlama, işitme ve kavrama becerisi.</li>
+                        <li><strong>Dis- (Ön Ek):</strong> "Sınırlılık" anlamına gelir (Örn: Disleksi, Diskalkuli).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <p>&copy; 2025 Özel Eğitim Vize Notları Derlemesi. Tüm içerik sağlanan PDF ve DOCX notlarından alınmıştır.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Mobil menü açma/kapama
+            menuButton.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden', !isHidden);
+                menuButton.querySelector('svg.block').classList.toggle('hidden', !isHidden);
+                menuButton.querySelector('svg.hidden').classList.toggle('hidden', isHidden);
+            });
+
+            // Mobil menüdeki linke tıklayınca menüyü kapatma
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuButton.querySelector('svg.block').classList.remove('hidden');
+                        menuButton.querySelector('svg.hidden').classList.add('hidden');
+                    }
+                });
+            });
+
+            // Hangi bölümde olduğunu gösteren Intersection Observer
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        // Tüm linklerden 'active' sınıfını kaldır
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: '-20% 0px -70% 0px' }); // Ekranın ortasına yakın bir alanda aktifleşir
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
